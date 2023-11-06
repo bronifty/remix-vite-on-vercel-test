@@ -4,9 +4,10 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "build": "vite build && vite build --ssr",
-    "dev": "node ./server.mjs",
-    "start": "cross-env NODE_ENV=production node ./server.mjs",
+    "build": "echo \"This will never get called \"",
+    "vercel-build": "vite build && vite build --ssr",
+    "dev": "node ./api/server.mjs",
+    "start": "cross-env NODE_ENV=production node ./api/server.mjs",
     "typecheck": "tsc"
   },
   "dependencies": {

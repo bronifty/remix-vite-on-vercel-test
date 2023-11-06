@@ -32,9 +32,10 @@ app.all(
   createRequestHandler({
     build: vite
       ? () => unstable_loadViteServerBuild(vite)
-      : await import("./api/index.js"),
+      : await import("../build/index.js"),
   })
 );
 
-const port = 3000;
-app.listen(port, () => console.log("http://localhost:" + port));
+// const port = 3000;
+// app.listen(port, () => console.log("http://localhost:" + port));
+export default app;

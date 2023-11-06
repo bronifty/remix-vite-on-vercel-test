@@ -3,5 +3,16 @@ import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  plugins: [remix(), tsconfigPaths()],
+  plugins: [
+    remix({
+      ignoredRouteFiles: ["**/.*"],
+      // serverModuleFormat: "cjs",
+      appDirectory: "app",
+      assetsBuildDirectory: "public/build",
+      publicPath: "/build/",
+      serverBuildPath: "build/index.js",
+    }),
+    ,
+    tsconfigPaths(),
+  ],
 });
