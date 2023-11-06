@@ -4,7 +4,7 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "build": "echo \"This will never get called \"",
+    "build": "echo \"make sure you set the vercel build output dir to public/build; the 'vercel-build' command will run in prod and deploy to vercel \"",
     "vercel-build": "vite build && vite build --ssr",
     "dev": "node ./api/server.mjs",
     "start": "cross-env NODE_ENV=production node ./api/server.mjs",
