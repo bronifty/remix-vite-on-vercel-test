@@ -1,4 +1,4 @@
-# Remix-Vite on Vercel
+# Remix-Vite on Vercel (Headless Express Pattern)
 
 - Make sure to set the custom build output directory (the frontend) to "public/build"; the vercel.json config file is set to intercept all requests to the frontend and redirect them to the api folder's serverless function, which then redirects requests to the custom server build functions produced by remix team via their vite plugin
 
